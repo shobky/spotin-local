@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: hsl(0, 0%, 100%); /* White background */
+    --layer: hsl(0, 0%, 100%); /* Dark background */
+    --foreground: hsl(0, 0%, 0%); /* Dark gray text color */
+    
+    --order-new: hsl(133, 100%, 25%);
+    --order-pickup: hsl(244, 100%, 50%);
+    --order-preparing: hsl(29, 96%, 53%);
+    --order-complete: hsl(0, 0%, 24%);
+    --order-canceled: hsl(0, 50%, 26%);
+
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(20 14.3% 4.1%);
+
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(20 14.3% 4.1%);
+
+    --primary: hsl(29, 96%, 53%);
+    --primary-foreground: hsl(60 9.1% 97.8%);
+
+    --secondary: hsl(0, 0%, 96%);
+    --secondary-foreground: hsl(24 9.8% 10%);
+
+    --muted: hsl(60 4.8% 85.9%);
+    --muted-foreground: hsl(0, 1%, 31%);
+
+    --accent: hsl(60 4.8% 95.9%);
+    --accent-foreground: hsl(24 9.8% 10%);
+
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(60 9.1% 97.8%);
+
+    --border: hsl(20 5.9% 90%);
+    --input: hsl(20 5.9% 90%);
+    --ring: hsl(20 14.3% 4.1%);
+
+    --radius: 0.5rem;
+
+    --shadow: hsl(0, 0%, 75.3%);
+
+  }
+
+  .dark {
+    --background: hsl(0, 0%, 0%); /* Dark background */
+    --layer: hsl(0, 0%, 0%); /* Dark background */
+    --foreground: hsl(0, 0%, 100%); /* White text color */
+
+    --card: hsl(20 14.3% 4.1%);
+    --card-foreground: hsl(60 9.1% 97.8%);
+
+    --popover: hsl(20 14.3% 4.1%);
+    --popover-foreground: hsl(60 9.1% 97.8%);
+
+    --primary: hsl(29, 96%, 53%);
+    --primary-foreground: hsl(0, 0%, 100%);
+
+    --secondary: hsl(30, 4%, 9%);
+    --secondary-foreground: hsl(60 9.1% 97.8%);
+
+    --muted: hsl(12 6.5% 15.1%);
+    --muted-foreground: hsl(24 5.4% 63.9%);
+
+    --accent: hsl(12 6.5% 15.1%);
+    --accent-foreground: hsl(60 9.1% 97.8%);
+
+    --destructive: hsl(0 70.8% 45.6%);
+    --destructive-foreground: hsl(60 9.1% 97.8%);
+
+    --border: hsl(12 6.5% 15.1%);
+    --input: hsl(12 6.5% 15.1%);
+    --ring: hsl(24 5.7% 82.9%);
+
+    --shadow: hsl(0, 0%, 12.5%);
+
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* width */
+.pretty-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+.pretty-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+  border-radius: 0 1.5rem 1.5rem 0;
+  margin-top: 2px;
+
+}
+
+/* Handle */
+.pretty-scrollbar::-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+
+}
+
+/* Handle on hover */
+.pretty-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
