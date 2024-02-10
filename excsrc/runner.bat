@@ -3,7 +3,7 @@ REM Open the application in the default web browser
 start http://localhost:3000
 
 REM Navigate to the project directory
-cd  ../pkg
+cd  ../src
 
 REM Start the Firebase emulators in a new command window
 start cmd /k firebase emulators:start --import ./database --export-on-exit=./database
